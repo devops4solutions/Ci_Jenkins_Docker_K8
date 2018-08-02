@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>NLP</title>
+	<script src="script/jquery-ui/external/jquery/jquery.js"></script>
+	<script src="script/jquery-ui/jquery-ui.js"></script>
+	<link href="script/jquery-ui/jquery-ui.css" rel="stylesheet">
+	<link href="style/main.css" rel="stylesheet">
+</head>
+<body>
+
+	<div id="titleBar">
+		<div>
+			<img src="images/logo-sm.jpg" height="66" style="position: absolute;" />
+			<span class="logoText">Innovation Lab</span>
+			<span class="titleText">Natural Language Processing</span>
+		</div>
+	</div>
+
+	<div class="ui-state-highlight ui-corner-all" style="border: 1px solid gray; margin-bottom: 7px; padding: 0 .7em;">
+		<p>
+			The demonstrations and execution of Natural Language Processing on this site is
+			done using the open source Apache framework <a href="https://opennlp.apache.org/" target="_blank">OpenNLP</a>.
+			Visualizations of the different stages of processing unstructured data help understand what is going on under the hood when text is processed.<br>
+			Models that are used have been trained by OpenNLP and are freely available on <a href="http://opennlp.sourceforge.net/models-1.5/" target="_blank">SourceForge</a>. <br>
+			OpenNLP is an extensible framework, using the base functionality to train your own models can improve results for your specific needs
+			and allow for domain specific terminology to train your own models.
+		</p>
+	</div>
+
+	<div id="tabs">
+		<ul>
+			<li><a href="#SentenceFinder">Sentence Finder</a></li>
+			<li><a href="#Tokenizing">Tokenizing</a></li>
+			<li><a href="#PartofSpeech">Part-of-Speech</a></li>
+			<li><a href="#Parser">Parser</a></li>
+			<li><a href="#EntityFinder">Entity Finder</a></li>
+			<li><a href="#CoRef">Coreference</a></li>
+			<li><a href="#UseCase">Use Case</a></li>
+		</ul>
+		<div id="SentenceFinder">
+			<iframe src="sentences.html" class="rounded" width="100%"></iframe>
+		</div>
+		<div id="Tokenizing">
+			<iframe src="tokenize.html" class="rounded" width="100%"></iframe>
+		</div>
+		<div id="PartofSpeech">
+			<iframe src="partofspeech.html" class="rounded" width="100%"></iframe>
+		</div>
+		<div id="Parser">
+			<iframe src="parser.html" class="rounded" width="100%"></iframe>
+		</div>
+		<div id="EntityFinder">
+			<iframe src="entityfinder.html" class="rounded" width="100%"></iframe>
+		</div>
+		<div id="CoRef">
+			<iframe src="coref.html" class="rounded" width="100%"></iframe>
+		</div>
+		<div id="UseCase">
+			<iframe src="usecase.html" class="rounded" width="100%"></iframe>
+		</div>
+	</div>
+
+	<script>
+		$("#tabs").tabs({active:0});
+	</script>
+</body>
+</html>

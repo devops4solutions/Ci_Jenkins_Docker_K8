@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>NLP</title>
+	<script src="script/jquery-ui/external/jquery/jquery.js"></script>
+	<script src="script/jquery-ui/jquery-ui.js"></script>
+    <script src="script/d3.min.js"></script>
+    <script src="script/main.js"></script>
+	<link href="script/jquery-ui/jquery-ui.css" rel="stylesheet">
+	<link href="style/main.css" rel="stylesheet">
+</head>
+<body>
+
+	<div id="titleBar">
+		<div>
+			<img src="images/logo-sm.jpg" height="66" style="position: absolute;" />
+			<span class="logoText">Innovation Lab</span>
+			<span class="titleText">Natural Language Processing</span>
+		</div>
+	</div>
+
+    <div id="MenuTabs">
+        <ul>
+            <li><a href="#OpenNlpExamples">OpenNLP Examples</a></li>
+            <li><a href="#Training">Training</a></li>
+        </ul>
+        <div id="OpenNlpExamples" style="background:#fff; padding:1px;">
+            <div id="ExampleTabs">
+                <div class="ui-state-highlight ui-corner-all" style="border: 1px solid gray; margin-bottom: 7px; padding: 0 .7em;">
+                    <p>
+                        The demonstrations and execution of Natural Language Processing on this site is
+                        done using the open source Apache framework <a href="https://opennlp.apache.org/" target="_blank">OpenNLP</a>.
+                        Visualizations of the different stages of processing unstructured data help understand what is going on under the hood when text is processed.
+                    </p>
+                </div>
+                <ul>
+                    <li><a href="#SentenceFinder">Sentence Finder</a></li>
+                    <li><a href="#Tokenizing">Tokenizing</a></li>
+                    <li><a href="#PartofSpeech">Part-of-Speech</a></li>
+                    <li><a href="#Parser">Parser</a></li>
+                    <li><a href="#EntityFinder">Entity Finder</a></li>
+                    <li><a href="#CoRef">Co-reference</a></li>
+                    <li><a href="#UseCase">Use Case</a></li>
+                </ul>
+                <div id="SentenceFinder">
+                    <iframe id="isentences" src="sentences.html" class="rounded" width="100%"></iframe>
+                </div>
+                <div id="Tokenizing">
+                    <iframe src="tokenize.html" class="rounded" width="100%"></iframe>
+                </div>
+                <div id="PartofSpeech">
+                    <iframe src="partofspeech.html" class="rounded" width="100%"></iframe>
+                </div>
+                <div id="Parser">
+                    <iframe src="parser.html" class="rounded" width="100%"></iframe>
+                </div>
+                <div id="EntityFinder">
+                    <iframe src="entityfinder.html" class="rounded" width="100%"></iframe>
+                </div>
+                <div id="CoRef">
+                    <iframe src="coref.html" class="rounded" width="100%"></iframe>
+                </div>
+                <div id="UseCase">
+                    <iframe src="usecase.html" class="rounded" width="100%"></iframe>
+                </div>
+            </div>
+        </div>
+        <div id="Training" style="height:800px; width:97%;">
+            <div class="ui-state-highlight ui-corner-all" style="border: 1px solid gray; margin-bottom: 7px; padding: 0 .7em;">
+                <p>
+                    Models that are used have been trained by OpenNLP and are freely available on <a href="http://opennlp.sourceforge.net/models-1.5/" target="_blank">SourceForge</a>. <br>
+                    OpenNLP is an extensible framework, using the base functionality to train your own models can improve results for your specific needs
+                    and allow for domain specific terminology to train your own models.
+                </p>
+            </div>
+
+            <div id="perspective">
+
+                <div sytle="display:inline-block">
+                    <span class="boldlink navCubeFront">Train Model</span> |
+                    <span class="boldlink navCubeTop">OpenNLP Models</span> |
+                    <span class="boldlink navCubeBottom">Custom Models</span> |
+                    <span class="boldlink navCubeRight">RIGHT</span> |
+                    <span class="boldlink navCubeLeft">LEFT</span> |
+                    <span class="boldlink navCubeBack">BACK</span>
+                </div><br>
+                <div id="cube" style="display:inline-block; margin-left:200px;">
+
+                    <div class="face top">
+                        <div id="pmHead" class="cubeHeader">
+                            <b>Models provided by OpenNLP</b>
+                        </div>
+                        <div id="pmContent" class="cubeContent"></div>
+                    </div>
+                    <div class="face front">
+
+                        <div class="cubeHeader">
+                            <b>Train Models</b>
+                        </div>
+
+                        <div class="cubeContent">
+
+                            <div class="cubeRow">
+                                <span class="formLabel percent45 rightAlign">NLP Process:</span>
+                                <span class="formInput">
+                                    <select id="nlpType" name="nlpType" class="modelTrainTypeSelect" style="width:auto;"></select>
+                                </span>
+                            </div>
+
+                            <div class="cubeRow">
+                                <span class="formLabel percent45 rightAlign">Model Name:</span>
+                                <span class="formInput">
+                                    <input id="tmModelName" type="text" name="modelName" class="rounded"/>
+                                </span>
+                            </div>
+
+                            <div class="cubeRow" id="trainingDataDiv">
+                                <span class="formLabel percent45 rightAlign">Training data:</span>
+                                <input type="file" name="tdiFile" id="tdiFile" class="fileInput">
+                            </div>
+
+                            <div class="cubeRow">
+                                <span class="formLabel percent45 rightAlign"><label class="lblPointer" for="regEx">Regular Expression:</label></span>
+                                <span class="formInput">
+                                    <input id="regEx" type="checkbox" name="isRegEx"/>
+                                </span>
+                            </div>
+
+                            <button style="float:right" id="trainModelButton">Train Model</button>
+
+                            <div id="trainingSuccess" style="color:blue; font-weight:bold;"></div>
+
+                        </div>
+
+                    </div>
+                    <div class="face right"> </div>
+                    <div class="face back"> </div>
+                    <div class="face left"> </div>
+                    <div class="face bottom">
+                        <div id="ctmHead" class="cubeHeader">
+                            <b>Custom Trained Models</b>
+                        </div>
+                        <div id="ctmContent" class="cubeContent"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script type="text/javascript">$(window).load(nlpApp.init);</script>
+
+</body>
+</html>

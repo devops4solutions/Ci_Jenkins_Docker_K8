@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Tokenize</title>
+
+	<script src="script/jquery-ui/external/jquery/jquery.js"></script>
+	<script src="script/jquery-ui/jquery-ui.js"></script>
+	<script src="script/main.js"></script>
+	<link href="script/jquery-ui/jquery-ui.css" rel="stylesheet">
+	<link href="style/main.css" rel="stylesheet">
+
+</head>
+<body style="background:white;">
+
+<div class="ui-widget">
+	<div class="ui-state-highlight ui-corner-all" style="margin-top: 20px; padding: 3px .7em;">
+
+		The Part of Speech Tagger marks tokens with their corresponding word
+		type based on the token itself and the context of the token.
+		A token might have multiple pos tags depending on the token and the context.
+		The OpenNLP POS Tagger uses a probability model to predict the correct pos
+		tag out of the tag set. To limit the possible tags for a token a tag
+		dictionary can be used which increases the tagging and runtime performance of the tagger.
+		<br>
+
+	</div>
+</div>
+
+<div style="width:48%; display:inline-block;">
+
+	<div style="margin-top:10px; vertical-align: bottom;height:30px;">
+		<b>Enter Text Below:</b> 
+		<button style="float:right;" id="generateTextButton">Generate Text</button>
+	</div>
+	<div>
+		<textarea id="textInput" style="width:100%; margin:7px 0px 7px 0px;" rows="15"></textarea>
+	</div>
+	<button style="float:right" id="findTagsButton">Find tags</button>
+	
+</div>
+
+<div style="width:48%; padding:10px; display:inline-block; vertical-align: top;">
+	<div>
+		<b>Results:</b>
+	</div>
+	<div class="ui-state-highlight ui-corner-all" style="margin-top: 20px; padding: 3px .7em;">
+		<span class="ui-icon ui-icon-info" style="float: left; margin-right: .3em;"></span>
+		<i>Hover over the tag codes to see description and probabilities.</i>
+	</div>
+
+	<div id="tagResults" style="width:auto;"></div>
+</div>
+<script type="text/javascript">
+	pos.init();
+</script>
+</body>
+</html>

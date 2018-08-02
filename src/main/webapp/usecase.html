@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Entity Finder</title>
+
+	<script src="script/jquery-ui/external/jquery/jquery.js"></script>
+	<script src="script/jquery-ui/jquery-ui.js"></script>
+	<script src="script/d3.min.js"></script>
+    <script src="script/main.js"></script>
+	<link href="script/jquery-ui/jquery-ui.css" rel="stylesheet">
+	<link href="style/main.css" rel="stylesheet">
+	<style>
+		.ui-progressbar-value {
+			background-color: rgb(0, 111, 175);
+		}
+		.flaggedWTT {
+			cursor:pointer;
+		}
+	</style>
+</head>
+<body style="background:white;">
+
+<div class="ui-widget">
+	<div class="ui-state-highlight ui-corner-all" style="margin-top: 20px; padding: 3px .7em;">
+		This use case goes through the provided text and will remove Names, Locations, and Days.<br>
+		The results are a 3 examples of how you can process the data and display it.
+		<ol>
+			<li>Highlighted Personal Information: Keeps data in place and highlights it. <b><i>Hover over the highlighted fields to see classification and probability</i></b>. </li>
+			<li>Redacted Personal Information: Replaces the sensitive data with a generalized classification (i.e. PERSON, LOCATION, or DATE).</li>
+			<li>Replace Personal Information: Replaces data with fictional names, fictional locations, and randomly created dates.</li>
+		</ol>
+	</div>
+</div>
+
+<div style="width:48%; display:inline-block;">
+
+	<div style="margin-top:10px; vertical-align: bottom;height:30px;">
+		<b>Enter Text Below:</b> 
+		<button style="float:right;" id="sampleTextButton">Generate Text</button>
+	</div>
+	<div>
+		<textarea id="textInput" style="width:100%; margin:7px 0px 7px 0px;" rows="15"></textarea>
+	</div>
+	<button style="float:right" id="redactButton">Redact Information</button>
+	
+</div>
+
+<div style="width:48%; padding:10px; display:inline-block; vertical-align: top;">
+	<div style="margin-top:10px; vertical-align: bottom;height:30px;">
+		<b>Results:</b>
+	</div>
+
+
+	<div id="results" style="width:auto;"></div>
+</div>
+
+
+<script>
+    useCase.init()
+</script>
+</body>
+</html>

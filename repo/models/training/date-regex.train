@@ -1,0 +1,3 @@
+([Mm][Oo][Nn])|([Tt][Uu][eE][Ss])|([Ww][Ee][Dd][Nn][Ee][Ss])|([Tt][Hh][Uu][Rr][Ss])|([Fr][Rr][Ii])|([Ss][Aa][Tt])|([Ss][Uu][Nn])[dD][aA][Yy][^A-Za-z]
+(0[1-9]|[1-9]|1[012])([- /.]|[- -.])(0[1-9]|[1-9]|[12][0-9]|3[01])([- /.]|[- -.])(19|20)?(\d\d)[^A-Za-z]
+(?i)(jan)(uary)?|(feb)(ruary)?|(mar)(ch)?|(apr)(il)?|(may)|(jun)(e)?|(jul)(y)?|(aug)(ust)?|(sep(t)?)(ember)?|(oct)(ober)?|(nov)(ember)?|(dec)(ember)?[^A-Za-z]

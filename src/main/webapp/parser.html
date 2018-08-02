@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Parser</title>
+
+	<script src="script/jquery-ui/external/jquery/jquery.js"></script>
+	<script src="script/jquery-ui/jquery-ui.js"></script>
+    <script src="script/d3.min.js"></script>
+    <script src="script/main.js"></script>
+	<link href="script/jquery-ui/jquery-ui.css" rel="stylesheet">
+	<link href="style/main.css" rel="stylesheet">
+	<style>
+		.ui-progressbar-value {
+			background-color: rgb(0, 111, 175);
+		}
+		.node circle {
+			fill: #fff;
+			stroke: steelblue;
+			stroke-width: 1.5px;
+		}
+
+		.node {
+			font: 10px sans-serif;
+		}
+
+		.link {
+			fill: none;
+			stroke: #ccc;
+			stroke-width: 1.5px;
+		}
+
+	</style>
+</head>
+<body style="background:white;">
+
+<div class="ui-widget">
+	<div class="ui-state-highlight ui-corner-all" style="margin-top: 20px; padding: 3px .7em;">
+		A parser determines the grammatical structure of a sentence. It will group words together into phrases.
+		These work rather well, but can make mistakes from time to time.
+	</div>
+</div>
+
+<div style="width:29%; display:inline-block;">
+
+	<div style="margin-top:10px; vertical-align: bottom;height:30px;">
+		<b>Enter Text Below:</b> 
+		<button style="float:right;" id="generateTextButton">Generate Text</button>
+	</div>
+	<div>
+		<textarea id="textInput" style="width:100%; margin:7px 0px 7px 0px;" rows="15"></textarea>
+	</div>
+	<button style="float:right" id="parserButton">Parse text</button>
+	
+</div>
+
+<div style="width:67%; padding:10px; display:inline-block; vertical-align: top;">
+	<div style="margin-top:10px; vertical-align: bottom;height:30px;">
+		<b>Results:</b>
+	</div>
+	<div id="parserResults" style="width:auto;"></div>
+</div>
+
+<script>
+    parser.init();
+</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Entity Finder</title>
+
+	<script src="script/jquery-ui/external/jquery/jquery.js"></script>
+	<script src="script/jquery-ui/jquery-ui.js"></script>
+    <script src="script/d3.min.js"></script>
+    <script src="script/main.js"></script>
+	<link href="script/jquery-ui/jquery-ui.css" rel="stylesheet">
+	<link href="style/main.css" rel="stylesheet">
+	<style>
+		.ui-progressbar-value {
+			background-color: rgb(0, 111, 175);
+		}
+		.flaggedWTT {
+			cursor:pointer;
+		}
+
+		.highlight {
+			background-color:#FFFF99;
+			text-decoration: underline;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body style="background:white;">
+
+<div class="ui-widget">
+	<div class="ui-state-highlight ui-corner-all" style="margin-top: 20px; padding: 3px .7em;">
+		Co-reference can be used to find generic references to a person or object in the same sentence or across multiple sentences.<br>
+		It may find <span class="highlight">Nick</span> and determine in later text that the word <span class="highlight">he</span> refers back to <span class="highlight">Nick</span>.<br>
+		When used in conjunction with an Entity Name Finder, it can locate names and determine that following personal pronoun in the text
+		refers back to the original name.<br>
+		This can be a difficult task and will not work 100% of the time.
+	</div>
+</div>
+
+<div style="width:48%; display:inline-block;">
+
+	<div style="margin-top:10px; vertical-align: bottom;height:30px;">
+		<b>Enter Text Below:</b> 
+		<button style="float:right;" id="sampleTextButton">Generate Text</button>
+	</div>
+	<div>
+		<textarea id="textInput" style="width:100%; margin:7px 0px 7px 0px;" rows="15"></textarea>
+	</div>
+	<button style="float:right" id="findCorefsButton">Find Entities</button>
+	
+</div>
+
+<div style="width:48%; padding:10px; display:inline-block; vertical-align: top;">
+	<div style="margin-top:10px; vertical-align: bottom;height:30px;">
+		<b>Results:</b>
+	</div>
+	<div id="results" style="width:auto;"></div>
+</div>
+
+<script>
+    coref.init();
+</script>
+</body>
+</html>

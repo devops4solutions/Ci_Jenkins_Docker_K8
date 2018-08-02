@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Tokenize</title>
+
+	<script src="script/jquery-ui/external/jquery/jquery.js"></script>
+	<script src="script/jquery-ui/jquery-ui.js"></script>
+	<script src="script/main.js"></script>
+	<link href="script/jquery-ui/jquery-ui.css" rel="stylesheet">
+	<link href="style/main.css" rel="stylesheet">
+
+
+</head>
+<body style="background:white;">
+
+<div class="ui-widget">
+	<div class="ui-state-highlight ui-corner-all" style="margin-top: 20px; padding: 3px .7em;">
+		With OpenNLP (as with many systems), tokenization is a two-stage process: first,
+		sentence boundaries are identified, then tokens within each sentence are identified.<br>
+		OpenNLP offers multiple tokenizer implementations:
+	 	<ul>
+	 		<li><b>Whitespace Tokenizer</b> - A whitespace tokenizer, non whitespace sequences are identified as tokens</li>
+	 		<li><b>Simple Tokenizer</b> - A character class tokenizer, sequences of the same character class are tokens</li>
+	 		<li><b>Learnable Tokenizer</b> - A <a class="maxEntTT" href="javascript:void(0);" title="maximum entropy">maximum entropy</a> tokenizer, detects token boundaries based on probability model</li>
+	 	</ul>
+	 	
+	 	<span class="ui-icon ui-icon-info" style="float: left; margin-right: .3em;"></span> The example below uses the 
+	 	<i><b>Learnable Tokenizer/<a class="maxEntTT" href="javascript:void(0);" title="maximum entropy">Maximum Entropy</a></b></i> to make its decisions and tokenize the provided text.
+	</div>
+</div>
+
+<div style="width:48.3%; display:inline-block;">
+
+	<div style="margin-top:10px; vertical-align: bottom;height:30px;">
+		<b>Enter Text Below:</b> 
+		<button style="float:right;" id="generateTextButton">Generate Text</button>
+	</div>
+	<div>
+		<textarea id="textInput" style="width:100%; margin:7px 0px 7px 0px;" rows="15"></textarea>
+	</div>
+	<button style="float:right" id="tokenizeTextButton">Tokenize Text</button>
+	
+</div>
+
+<div style="width:48%; padding:10px; display:inline-block; vertical-align: top;">
+	<div style="height:35px;"><b>Results:</b></div>
+	<div id="tokenResults"></div>
+</div>
+
+<script type="text/javascript">
+    token.init();
+</script>
+</body>
+</html>
