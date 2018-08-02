@@ -1,0 +1,8 @@
+{"label":" - Select Type - ", "value":""}
+{"label":"Sentence Segmentation", "value":"Sentence Segmentation"}
+{"label":"Tokenization", "value":"Tokenization"}
+{"label":"Part-of-Speech Tagging", "value":"Part-of-Speech Tagging"}
+{"label":"Parser", "value":"Chunking"}
+{"label":"Named Entity Recognizer", "value":"Named Entity Recognizer"}
+{"label":"Co-reference", "value":"Co-Reference Resolution"}
+{"label":"Regular Expression", "value":"Named Entity Recognizer RegEx"}

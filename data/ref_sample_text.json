@@ -1,0 +1,30 @@
+{
+  "nlpProcesses" : ["Sentence", "Tokenization", "POS", "Parser"],
+  "sentences" : [
+    "The word \"Scientist\" first appeared in 1833.",
+    "A 10-Year-Old Accidentally Created in 2012 a New Molecule in Science Class: Tetranitratoxycarbon.",
+    "\"Sphenopalatine ganglioneuralgia\" is the scientific term for brain freeze.",
+    "Four Japanese scientists measured the amount of friction between a shoe, a banana skin and the floor: it's 0.07.",
+    "The World's oldest known creature, a mollusc, was 507 years old until scientists killed it by mistake.",
+    "Eating salmon helps hair grow faster.",
+    "During photosynthesis, plants emit light, called fluorescence, that humans can't see.",
+    "Sunflowers can be used to clean up radioactive waste.",
+    "It would take light 100,000 years to travel from one end of the Milky Way galaxy to the other.",
+    "If you could fold a piece of paper 50 times, its thickness would exceed the distance from here to the Sun."
+  ]
+}
+{
+  "nlpProcesses" : ["NER", "UseCase"],
+  "sentences": [
+    "Former first lady Nancy Reagan was taken to a suburban Los Angeles hospital \"as a precaution\" Sunday after a fall at her home, an aide said.",
+    "The 86-year-old Reagan will remain overnight for observation at a hospital in Santa Monica, California, said Joanne Drake, chief of staff for the Reagan Foundation."
+  ]
+}
+{
+  "nlpProcesses" : ["CoRef"],
+  "sentences": [
+    "Former first lady Nancy Reagan was taken to a suburban Los Angeles hospital \"as a precaution\" Sunday after a fall at her home, Ronald Reagan said.",
+    "He said with confidence that she will be fine."
+  ]
+}
+

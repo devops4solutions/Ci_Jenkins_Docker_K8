@@ -1,0 +1,6 @@
+#Tue, 17 Jul 2018 21:47:58 -0400
+
+info.app.version=0.1
+info.app.name=opennlp
+grails.env=production
+info.app.grailsVersion=3.1.16
